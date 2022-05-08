@@ -8,5 +8,6 @@ public interface ICooperativeMemberRepository {
 	List<CooperativeMember> getAll();
 	CooperativeMember getMember(String username);
 	void recordMember(CooperativeMember member);
+	void delete(CooperativeMember member);
 
 }

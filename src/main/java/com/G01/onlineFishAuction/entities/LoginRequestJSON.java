@@ -16,4 +16,22 @@ public class LoginRequestJSON {
         return false;
     }
 
+	public String getLoginType() {
+		return loginType;
+	}
+
+	public String getApiSecretKey() {
+		return apiSecretKey;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+    
+    
+
 }

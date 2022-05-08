@@ -5,9 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fish.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fish.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/OnlineFishAuctionApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CustomerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateCustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/ICooperativeMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/CooperativeMember.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/IUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginRequestJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/G01/onlineFishAuction/OnlineFishAuctionApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/business/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/business/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/business/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/business/UserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/dataAccess/HibernateMemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/dataAccess/HibernateMemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/dataAccess/ICooperativeMemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/dataAccess/ICooperativeMemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/CooperativeMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/CooperativeMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/LoginRequestJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/LoginRequestJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/LoginResponseJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/LoginResponseJson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/restApi/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/restApi/Controller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +108,19 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.G01.onlineFishAuction.entities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.OnlineFishAuctionApplication">
+    <configuration name="dbPopulater.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration name="OnlineFishAuctionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="fish" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.G01.onlineFishAuction.OnlineFishAuctionApplication" />
@@ -88,6 +128,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.dbPopulater.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +146,8 @@
       <workItem from="1651998273903" duration="106000" />
       <workItem from="1651998392394" duration="1170000" />
       <workItem from="1652012414942" duration="183000" />
-      <workItem from="1652012629550" duration="4594000" />
+      <workItem from="1652012629550" duration="6333000" />
+      <workItem from="1652027957659" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="Jar gen">
       <created>1651965265224</created>
@@ -124,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652015169827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Jar gen">
+      <created>1652018858233</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652018858233</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

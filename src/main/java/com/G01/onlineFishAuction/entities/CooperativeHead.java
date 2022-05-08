@@ -6,41 +6,36 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cooperativemember")
-public class CooperativeMember implements IUser{
+@Table(name="cooperativehead")
+public class CooperativeHead implements IUser{
 	@Id
 	@Column(name="username")
 	String username;
-	@Column(name="mail")
-	String mail;
 	@Column(name="password")
 	String password;
+	@Column(name="mail")
+	String mail;
 	
 	
-	public CooperativeMember(String username, String mail, String password) {
+	public CooperativeHead(String username, String password, String mail) {
 		super();
 		this.username = username;
-		this.mail = mail;
 		this.password = password;
+		this.mail = mail;
 	}
-	
-	public CooperativeMember() {
+	public CooperativeHead() {
 		
 	}
-
-	@Override
 	public String getUsername() {
 		return username;
 	}
-
+	public String getPassword() {
+		return password;
+	}
 	public String getMail() {
 		return mail;
 	}
 	
-	@Override
-	public String getPassword() {
-		return password;
-	}
 	
 	
 

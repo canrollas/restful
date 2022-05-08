@@ -24,6 +24,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="entityManagerFactory" value="21fb3c95-610a-4c11-ae13-e2093db739cd" />
+          <factory-entry name="fish" value="21fb3c95-610a-4c11-ae13-e2093db739cd" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

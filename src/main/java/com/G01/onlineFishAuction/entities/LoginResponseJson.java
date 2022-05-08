@@ -1,8 +1,10 @@
 package com.G01.onlineFishAuction.entities;
 
-import lombok.Data;
+
 
 import java.util.Date;
+
+import lombok.Data;
 
 @Data
 public class LoginResponseJson {
@@ -19,4 +21,26 @@ public class LoginResponseJson {
         this.path = path;
         this.userType = userType;
     }
+
+	public int getStatus() {
+		return status;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public long getDateTimeObject() {
+		return dateTimeObject;
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+    
+    
 }
