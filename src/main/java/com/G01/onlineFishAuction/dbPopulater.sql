@@ -1,8 +1,8 @@
 -- Note that this sql script is only for populating the local db machine.
 CREATE
-    DATABASE FISHAUCTION;
+DATABASE fish;
 USE
-    FISHAUCTION;
+fish;
 
 CREATE TABLE customer
 (
@@ -14,21 +14,21 @@ CREATE TABLE customer
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-CREATE TABLE cooperativeHead
+CREATE TABLE cooperativehead
 (
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-CREATE TABLE cooperativeMember
+CREATE TABLE cooperativemember
 (
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-CREATE TABLE fisherMan
+CREATE TABLE fisherman
 (
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
@@ -37,5 +37,16 @@ CREATE TABLE fisherMan
     owner    VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
+
 INSERT INTO Customer
 VALUES ("Iyte Bilgisayar", "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
+INSERT INTO Customer
+VALUES ("randomAddress", "random@gmail.com", "randomUser", "cagatay", "iba", "random_psw_123");
+INSERT INTO cooperativeMember
+VALUES ("member234@email.com", "Member_123", "random_psw_234");
+INSERT INTO Customer
+VALUES ("randomAddress", "random@gmail.com", "randomUser", "cagatay", "iba", "random_psw_123");
+INSERT INTO fisherman
+VALUES ("randomFm@gmail.com", "Ali_Kaptan", "random_psw_567", "11111111111111111111111111", "ali kuscu");
+INSERT INTO cooperativeHead
+VALUES ("admin@gmail.com", "Admin", "lorem_ipsum"); "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
