@@ -19,17 +19,17 @@ public class Customer implements IUser{
 	String name;
 	@Column(name="mail")
 	String mail;
-	@Column(name="adress")
-	String adress;
+	@Column(name="address")
+	String address;
 	
 	
-	public Customer(String username, String surname, String name, String mail, String adress) {
+	public Customer(String username, String surname, String name, String mail, String address) {
 		super();
 		this.username = username;
 		this.surname = surname;
 		this.name = name;
 		this.mail = mail;
-		this.adress = adress;
+		this.address = address;
 	}
 	
 	public Customer() {
@@ -58,8 +58,8 @@ public class Customer implements IUser{
 		return mail;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 	
 	

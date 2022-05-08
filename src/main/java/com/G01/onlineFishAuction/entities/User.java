@@ -2,8 +2,12 @@ package com.G01.onlineFishAuction.entities;
 
 //import javax.persistence.MappedSuperclass;
 
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
+@MappedSuperclass
 public class User implements IUser{
+	@Id
 	private String username;
 	private String password;
 	

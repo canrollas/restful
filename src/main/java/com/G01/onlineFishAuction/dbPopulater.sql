@@ -1,12 +1,10 @@
 -- Note that this sql script is only for populating the local db machine.
-CREATE
-DATABASE fish;
-USE
-fish;
+CREATE DATABASE fish;
+USE fish;
 
 CREATE TABLE customer
 (
-    adress  VARCHAR(255) NOT NULL,
+    address  VARCHAR(255) NOT NULL,
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     name     VARCHAR(255) NOT NULL,
@@ -37,7 +35,6 @@ CREATE TABLE fisherman
     owner    VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-
 INSERT INTO customer
 VALUES ("Iyte Bilgisayar", "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
 INSERT INTO customer
@@ -49,4 +46,4 @@ VALUES ("randomAddress", "random@gmail.com", "randomUser", "cagatay", "iba", "ra
 INSERT INTO fisherman
 VALUES ("randomFm@gmail.com", "Ali_Kaptan", "random_psw_567", "11111111111111111111111111", "ali kuscu");
 INSERT INTO cooperativehead
-VALUES ("admin@gmail.com", "Admin", "lorem_ipsum"); "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
+VALUES ("admin@gmail.com", "Admin", "lorem_ipsum");

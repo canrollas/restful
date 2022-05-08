@@ -2,14 +2,20 @@ package com.G01.onlineFishAuction.business;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.G01.onlineFishAuction.dataAccess.ICooperativeHeadRepository;
 import com.G01.onlineFishAuction.dataAccess.ICooperativeMemberRepository;
 import com.G01.onlineFishAuction.dataAccess.ICustomerRepository;
+import com.G01.onlineFishAuction.dataAccess.IFishermanRepository;
 import com.G01.onlineFishAuction.dataAccess.IUserRepository;
+import com.G01.onlineFishAuction.entities.CooperativeHead;
 import com.G01.onlineFishAuction.entities.CooperativeMember;
 import com.G01.onlineFishAuction.entities.Customer;
+import com.G01.onlineFishAuction.entities.Fisherman;
 
 @Service
 public class UserManager implements IUserService {
@@ -17,72 +23,106 @@ public class UserManager implements IUserService {
 	ICustomerRepository customerRepository;
 	IUserRepository userRepository;
 	ICooperativeMemberRepository cooperativeMemberRepository;
+	ICooperativeHeadRepository cooperativeHeadRepository;
+	IFishermanRepository fishermanRepository;
+	
 	
 	@Autowired
 	public UserManager(ICustomerRepository customerRepository, IUserRepository userRepository,
-			ICooperativeMemberRepository cooperativeMemberRepository) {
+			ICooperativeMemberRepository cooperativeMemberRepository,
+			ICooperativeHeadRepository cooperativeHeadRepository, IFishermanRepository fishermanRepository) {
 		//super();
 		this.customerRepository = customerRepository;
 		this.userRepository = userRepository;
 		this.cooperativeMemberRepository = cooperativeMemberRepository;
+		this.cooperativeHeadRepository = cooperativeHeadRepository;
+		this.fishermanRepository = fishermanRepository;
 	}
 	
 	
 
 	@Override
+	@Transactional
 	public String login(String username, String password) {
 		return userRepository.checkLoginData(username, password);
 		
 	}
-
+	
 	@Override
-	public void logOut() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void signUp() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void memberRegister() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
+	@Transactional
 	public void customerRegister(Customer newCustomer) {
-		// TODO Auto-generated method stub
+		customerRepository.recordCustomer(newCustomer);
 		
 	}
 
 	@Override
-	public void cooperativeMember(CooperativeMember newMember) {
-		// TODO Auto-generated method stub
+	@Transactional
+	public void cooperativeMemberRegister(CooperativeMember newMember) {
+		cooperativeMemberRepository.recordMember(newMember);
 		
 	}
 
 	@Override
+	@Transactional
 	public void deleteCustomer(Customer customer) {
-		// TODO Auto-generated method stub
+		customerRepository.deleteCustomer(customer);
 		
 	}
 
 	@Override
+	@Transactional
 	public void deleteCooperativeMember(CooperativeMember cooperativeMember) {
-		// TODO Auto-generated method stub
+		cooperativeMemberRepository.delete(cooperativeMember);
 		
 	}
 
 
 
 	@Override
-	public List<Customer> getAll() {
-		// TODO Auto-generated method stub
+	@Transactional
+	public List<Customer> getAllCustomers() {
 		return customerRepository.getAll();
+	}
+
+
+	@Override
+	@Transactional
+	public List<CooperativeMember> getAllMembers() {
+		return cooperativeMemberRepository.getAll();
+	}
+
+
+
+	@Override
+	@Transactional
+	public List<CooperativeHead> getAdmin() {
+		return cooperativeHeadRepository.get();
+	}
+
+
+
+	@Override
+	@Transactional
+	public List<Fisherman> getFisherman() {
+		return fishermanRepository.getAll();
+	}
+
+
+
+	@Override
+	@Transactional
+	public void fishermanRegister(Fisherman fisherman) {
+		fishermanRepository.addFisherman(fisherman);
+		
+	}
+
+
+
+	@Override
+	@Transactional
+	public void deleteFisherman(Fisherman fisherman) {
+		fishermanRepository.deleteFisherman(fisherman);
+		
 	}
 
 }
