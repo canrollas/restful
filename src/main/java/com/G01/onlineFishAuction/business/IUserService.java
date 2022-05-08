@@ -10,7 +10,6 @@ public interface IUserService {
 	String login(String username, String password);
 	void customerRegister(Customer newCustomer);
 	void cooperativeMemberRegister(CooperativeMember newMember);
-	void fishermanRegister(Fisherman fisherman);
 	void deleteCustomer(Customer customer);
 	void deleteCooperativeMember(CooperativeMember cooperativeMember);
 	void deleteFisherman(Fisherman fisherman);

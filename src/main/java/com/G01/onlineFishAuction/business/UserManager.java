@@ -111,15 +111,6 @@ public class UserManager implements IUserService {
 
 	@Override
 	@Transactional
-	public void fishermanRegister(Fisherman fisherman) {
-		fishermanRepository.addFisherman(fisherman);
-		
-	}
-
-
-
-	@Override
-	@Transactional
 	public void deleteFisherman(Fisherman fisherman) {
 		fishermanRepository.deleteFisherman(fisherman);
 		

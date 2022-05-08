@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen changed">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeHeadManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeMemberManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeHeadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeMemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateFishRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/ICodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IFishRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Auction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Code.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/restApi/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/G01/onlineFishAuction/restApi/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +84,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -117,7 +134,7 @@
       <workItem from="1651998392394" duration="1170000" />
       <workItem from="1652012414942" duration="183000" />
       <workItem from="1652012629550" duration="6333000" />
-      <workItem from="1652027957659" duration="3835000" />
+      <workItem from="1652027957659" duration="5238000" />
     </task>
     <task id="LOCAL-00001" summary="Jar gen">
       <created>1651965265224</created>
@@ -161,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652028881374</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Jar gen changed">
+      <created>1652035468211</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652035468211</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
