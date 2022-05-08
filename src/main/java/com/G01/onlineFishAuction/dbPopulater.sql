@@ -38,15 +38,15 @@ CREATE TABLE fisherman
     PRIMARY KEY (username)
 );
 
-INSERT INTO Customer
+INSERT INTO customer
 VALUES ("Iyte Bilgisayar", "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
-INSERT INTO Customer
+INSERT INTO customer
 VALUES ("randomAddress", "random@gmail.com", "randomUser", "cagatay", "iba", "random_psw_123");
-INSERT INTO cooperativeMember
+INSERT INTO cooperativemember
 VALUES ("member234@email.com", "Member_123", "random_psw_234");
-INSERT INTO Customer
+INSERT INTO customer
 VALUES ("randomAddress", "random@gmail.com", "randomUser", "cagatay", "iba", "random_psw_123");
 INSERT INTO fisherman
 VALUES ("randomFm@gmail.com", "Ali_Kaptan", "random_psw_567", "11111111111111111111111111", "ali kuscu");
-INSERT INTO cooperativeHead
+INSERT INTO cooperativehead
 VALUES ("admin@gmail.com", "Admin", "lorem_ipsum"); "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
