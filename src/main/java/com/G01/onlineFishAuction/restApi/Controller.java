@@ -3,6 +3,8 @@ package com.G01.onlineFishAuction.restApi;
 import com.G01.onlineFishAuction.entities.LoginRequestJSON;
 import com.G01.onlineFishAuction.entities.LoginResponseJson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.G01.onlineFishAuction.business.*;
 import com.G01.onlineFishAuction.entities.User;
 
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import com.G01.onlineFishAuction.entities.CooperativeHead;
 import com.G01.onlineFishAuction.entities.CooperativeMember;
@@ -34,66 +38,78 @@ public class Controller {
     }
 
     @GetMapping("/customers")
-    public List<Customer> getCustomer() {
-        return userService.getAllCustomers();
+    public ResponseEntity<List<Customer>> getCustomer() {
+        List<Customer> customerList = null;
+        try {
+            customerList = userService.getAllCustomers();
+            return new ResponseEntity<List<Customer>>(customerList, HttpStatus.OK);
+            // TODO Exception generic tipi özel exceptionlara yer vermelidir. Önümüzdeki adımlarda düzenlenecektir.
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Eger exception return sırasında fırlatılırsa customerListi dısarıya serve etmemek gerek -> oyüzden null esitleniyor.!
+            customerList = null;
+            return new ResponseEntity<List<Customer>>(customerList, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+
     }
-    
+
     @GetMapping("/fisherman")
     public List<Fisherman> getFisherman() {
-    	return userService.getFisherman();
+        return userService.getFisherman();
     }
-    
+
     @GetMapping("/admin")
     public List<CooperativeHead> getCooperativeHead() {
-    	return userService.getAdmin();
+        return userService.getAdmin();
     }
-    
+
     @GetMapping("/members")
     public List<CooperativeMember> getMembers() {
-    	return userService.getAllMembers();
+        return userService.getAllMembers();
     }
 
     @PostMapping("/login")
-    public LoginResponseJson login(@RequestBody LoginRequestJSON loginRequestJSON) {
+    public ResponseEntity<LoginResponseJson> login(@RequestBody LoginRequestJSON loginRequestJSON) {
         String userName = loginRequestJSON.getUserName();
         String userPassword = loginRequestJSON.getPassword();
         String userType = loginRequestJSON.getLoginType();
-        if(loginRequestJSON.checkApiSecretKeyIsValid()){
+        if (loginRequestJSON.checkApiSecretKeyIsValid()) {
             if ((userType = userService.login(userName, userPassword)) != null) {
-                return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
+                return new ResponseEntity<LoginResponseJson>(new LoginResponseJson("Successfully logged in!", "/api/login", userType), HttpStatus.OK);
             } else {
-                return new LoginResponseJson(400, "Not logged in! error occured", "/api/login", userType);
+                return new ResponseEntity<LoginResponseJson>(new LoginResponseJson("Unauthorized access!!!", "/api/login", userType), HttpStatus.UNAUTHORIZED);
             }
         }
-        return new LoginResponseJson(400, "Unauthorized access!!!", "/api/login", userType);
+        return new ResponseEntity<LoginResponseJson>(new LoginResponseJson("Forbidden!!!", "/api/login", userType), HttpStatus.FORBIDDEN);
 
     }
-    
+
     @GetMapping("/loginget/{username}/{password}")
-    public LoginResponseJson login(@PathVariable String username, @PathVariable String password) {
-    	String userType;
-    	if ((userType = userService.login(username, password)) != null) {
-            return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
+    public ResponseEntity<LoginResponseJson> login(@PathVariable String username, @PathVariable String password) {
+        String userType;
+        if ((userType = userService.login(username, password)) != null) {
+            return new ResponseEntity<LoginResponseJson>(new LoginResponseJson("Successfully logged in!", "/api/login", userType), HttpStatus.OK);
         } else {
-            return new LoginResponseJson(400, "Not logged in! error occured", "/api/login", userType);
+            return new ResponseEntity<LoginResponseJson>(new LoginResponseJson("Unauthorized access!!!", "/api/login", userType), HttpStatus.UNAUTHORIZED);
         }
-   
+
     }
-    
+
     @PostMapping("signup/customer")
     public void registerCustomer(@RequestBody Customer customer) {
-    	userService.customerRegister(customer);
+        userService.customerRegister(customer);
     }
-    
+
     @PostMapping("signup/member")
     public void registerCooperativeMember(@RequestBody CooperativeMember cooperativeMember) {
-    	userService.cooperativeMemberRegister(cooperativeMember);
+        userService.cooperativeMemberRegister(cooperativeMember);
     }
-   
-    
+
+
     @PostMapping("/register-fisherman")
     public void registerFisherman(@RequestBody Fisherman fisherman) {
-    	userService.fishermanRegister(fisherman);
+        userService.fishermanRegister(fisherman);
     }
 
 }
