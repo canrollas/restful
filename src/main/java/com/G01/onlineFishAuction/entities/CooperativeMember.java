@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CooperativeMember")
+@Table(name="cooperativeMember")
 public class CooperativeMember implements IUser{
 	@Id
 	@Column(name="username")
