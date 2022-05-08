@@ -23,16 +23,15 @@ public class Controller {
         this.userService = userService;
     }
 
-    @GetMapping("/login/{authKey}/{userType}/{username}/{password}")
-    public LoginResponseJson getEmployeesById(@PathVariable String authKey, @PathVariable String username, @PathVariable String password, @PathVariable String userType) {
-        if (authKey.equals("BastırAnkaraGücü")) {
-            if ((userType = userService.login(username, password)) != null) {
-                return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
-            } else {
-                return new LoginResponseJson(400, "Not logged in! error occured", "/api/login", userType);
-            }
+    @GetMapping("/login/{userType}/{username}/{password}")
+    public LoginResponseJson getEmployeesById( @PathVariable String username, @PathVariable String password, @PathVariable String userType) {
+
+        if ((userType = userService.login(username, password)) != null) {
+            return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
+        } else {
+            return new LoginResponseJson(400, "Not logged in! error occured", "/api/login", userType);
         }
-        return new LoginResponseJson(400, "Unauthorized access!!!", "/api/login", userType);
+
     }
 
     @GetMapping("/customers")

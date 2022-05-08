@@ -7,8 +7,7 @@
     <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <workItem from="1651998273903" duration="106000" />
       <workItem from="1651998392394" duration="1170000" />
       <workItem from="1652012414942" duration="183000" />
-      <workItem from="1652012629550" duration="2390000" />
+      <workItem from="1652012629550" duration="4594000" />
     </task>
     <task id="LOCAL-00001" summary="Jar gen">
       <created>1651965265224</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652013280124</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Jar gen">
+      <created>1652015169827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652015169827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

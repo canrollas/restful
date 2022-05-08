@@ -6,7 +6,7 @@ fish;
 
 CREATE TABLE customer
 (
-    address  VARCHAR(255) NOT NULL,
+    adress  VARCHAR(255) NOT NULL,
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     name     VARCHAR(255) NOT NULL,
