@@ -40,10 +40,11 @@ CREATE TABLE Code(
     PRIMARY KEY (member_code)
 );
 CREATE TABLE auction(
-    date float ,
-    name String,
-    id String,
-    quota int
+    date FLOAT,
+    name VARCHAR(255),
+    id VARCHAR(255),
+    quota INT,
+    PRIMARY KEY (name)
 );
 INSERT INTO Customer
 VALUES ("Iyte Bilgisayar", "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");
