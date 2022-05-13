@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen changed">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fish.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginRequestJSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
-    </list>
+    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="some minor changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652035468211</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="some minor changes">
+      <created>1652468553045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652468553045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +190,7 @@
     </ignored-roots>
     <MESSAGE value="Jar gen" />
     <MESSAGE value="Jar gen changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar gen changed" />
+    <MESSAGE value="some minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some minor changes" />
   </component>
 </project>
