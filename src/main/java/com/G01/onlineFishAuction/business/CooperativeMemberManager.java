@@ -10,9 +10,9 @@ import com.G01.onlineFishAuction.entities.Fisherman;
 
 @Service
 public class CooperativeMemberManager implements ICooperativeMemberService{
-	IFishRepository fishRepository;
+	private IFishRepository fishRepository;
 	//ISaleRepository saleRepository;
-	IFishermanRepository fishermanRepository;
+	private IFishermanRepository fishermanRepository;
 	@Autowired
 	public CooperativeMemberManager(IFishRepository fishRepository, IFishermanRepository fishermanRepository) {
 		super();

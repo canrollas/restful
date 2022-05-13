@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="some minor changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateAuctionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IAuctionRepository.java" afterDir="false" />
+    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Auction Repository is Added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/AuctionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeMemberManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeMemberManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateAuctionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateAuctionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IAuctionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IAuctionRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652468553045</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Auction Repository is Added">
+      <created>1652469864235</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652469864235</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +205,7 @@
     <MESSAGE value="Jar gen" />
     <MESSAGE value="Jar gen changed" />
     <MESSAGE value="some minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some minor changes" />
+    <MESSAGE value="Auction Repository is Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auction Repository is Added" />
   </component>
 </project>
