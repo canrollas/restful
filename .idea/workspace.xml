@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="some minor changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateAuctionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IAuctionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/AuctionController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
