@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Repository
 public class HibernateAuctionRepository implements  IAuctionRepository{
@@ -23,4 +24,14 @@ public class HibernateAuctionRepository implements  IAuctionRepository{
         Session session  = entityManager.unwrap(Session.class);
         session.saveOrUpdate(auction);
     }
+
+    @Override
+    @Transactional
+    public List<Auction> getAll() {
+        Session session  = entityManager.unwrap(Session.class);
+        List<Auction> auctions = session.createQuery("from Auction", Auction.class).getResultList();
+        return auctions;
+    }
+
+
 }
