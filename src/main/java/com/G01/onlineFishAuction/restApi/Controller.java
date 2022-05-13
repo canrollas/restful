@@ -32,7 +32,6 @@ public class Controller {
     public Controller(ICustomerService customerService, IUserService userService, 
     		ICooperativeMemberService cooperativeMemberService) 
     {
-        super();
         this.customerService = customerService;
         this.userService = userService;
         this.cooperativeMemberService = cooperativeMemberService;
@@ -58,25 +57,11 @@ public class Controller {
     	return userService.getAllMembers();
     }
 
-    @PostMapping("/login")
-    public LoginResponseJson login(@RequestBody LoginRequestJSON loginRequestJSON) {
-        String userName = loginRequestJSON.getUserName();
-        String userPassword = loginRequestJSON.getPassword();
-        String userType = loginRequestJSON.getLoginType();
-        if(loginRequestJSON.checkApiSecretKeyIsValid()){
-            if ((userType = userService.login(userName, userPassword)) != null) {
-                return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
-            } else {
-                return new LoginResponseJson(400, "Not logged in! error occured", "/api/login", userType);
-            }
-        }
-        return new LoginResponseJson(400, "Unauthorized access!!!", "/api/login", userType);
 
-    }
-    
+
     @GetMapping("/loginget/{username}/{password}")
     public LoginResponseJson login(@PathVariable String username, @PathVariable String password) {
-    	String userType;
+    	String userType = "";
     	if ((userType = userService.login(username, password)) != null) {
             return new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType);
         } else {
