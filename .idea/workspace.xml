@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen changed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeHeadManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeMemberManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeHeadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeMemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateCodeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateFishRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/ICodeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IFishRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Auction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Code.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="some minor changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -58,13 +44,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectId" id="28rAgwus8po9o3OmGfQ05KxkrS4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -102,7 +81,7 @@
       <recent name="com.G01.onlineFishAuction.entities" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OnlineFishAuctionApplication">
+  <component name="RunManager">
     <configuration name="dbPopulater.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" />
       <script-mode>FILE</script-mode>
@@ -115,11 +94,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Database Script.dbPopulater.sql" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -185,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652035468211</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="some minor changes">
+      <created>1652468553045</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652468553045</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +182,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -208,6 +190,7 @@
     </ignored-roots>
     <MESSAGE value="Jar gen" />
     <MESSAGE value="Jar gen changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar gen changed" />
+    <MESSAGE value="some minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some minor changes" />
   </component>
 </project>
