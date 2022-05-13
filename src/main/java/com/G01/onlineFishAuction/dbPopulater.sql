@@ -59,4 +59,4 @@ VALUES ("randomFm@gmail.com", "Ali_Kaptan", "random_psw_567", "11111111111111111
 INSERT INTO cooperativeHead
 VALUES ("admin@gmail.com", "Admin", "lorem_ipsum");
 INSERT INTO Auction
-VALUES(1,"test", "1", 100)
+VALUES(1,"test", "1", 100);
