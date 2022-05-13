@@ -1,7 +1,8 @@
 # RESTFUL API 
 
-- Ignored prop. templates:
+## Ignored prop. templates:
 
+- Application.properities
 ```
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
