@@ -21,10 +21,7 @@ public class AuctionController {
     public List<Auction> getAllAuctions(){
         return iAuctionService.getAll();
     }
-    @GetMapping("/show-json-template-of-auction")
-    public Auction returnEmptyBodyAuction(){
-        return new Auction();
-    }
+
     @PostMapping("/add")
     public void addAuction(@RequestBody Auction auction){
         iAuctionService.add(auction);
