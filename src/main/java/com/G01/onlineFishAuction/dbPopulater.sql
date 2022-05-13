@@ -1,8 +1,6 @@
 -- Note that this sql script is only for populating the local db machine.
-CREATE
-    DATABASE fish;
-USE
-    fish;
+CREATE DATABASE fish;
+USE fish;
 
 CREATE TABLE customer
 (
@@ -14,14 +12,14 @@ CREATE TABLE customer
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-CREATE TABLE cooperativeHead
+CREATE TABLE cooperativehead
 (
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (username)
 );
-CREATE TABLE cooperativeMember
+CREATE TABLE cooperativemember
 (
     mail     VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
@@ -40,6 +38,12 @@ CREATE TABLE fisherman
 CREATE TABLE Code(
     member_code VARCHAR(255) NOT NULL,
     PRIMARY KEY (member_code)
+);
+CREATE TABLE auction(
+    date float ,
+    name String,
+    id String,
+    quota int
 );
 INSERT INTO Customer
 VALUES ("Iyte Bilgisayar", "canrollas@gmail.com", "canrollas", "Can", "Rollas", "123can123");

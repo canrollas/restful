@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="some minor changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateAuctionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IAuctionRepository.java" afterDir="false" />
+    <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="populater changes in db sql">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +22,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="can-rollas" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +88,7 @@
       <recent name="com.G01.onlineFishAuction.entities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Database Script.dbPopulater.sql">
     <configuration name="dbPopulater.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" />
       <script-mode>FILE</script-mode>
@@ -186,7 +189,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -195,6 +197,7 @@
     <MESSAGE value="Jar gen" />
     <MESSAGE value="Jar gen changed" />
     <MESSAGE value="some minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some minor changes" />
+    <MESSAGE value="populater changes in db sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="populater changes in db sql" />
   </component>
 </project>
