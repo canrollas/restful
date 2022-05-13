@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d976d00a-1036-46d8-8328-d45877d39eaf" name="Changes" comment="Jar gen changed">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeHeadManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/CooperativeMemberManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeHeadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/ICooperativeMemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/HibernateFishRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/ICodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/IFishRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Auction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/Code.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fish.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fish.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/business/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dataAccess/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/dbPopulater.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/entities/LoginResponseJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/G01/onlineFishAuction/restApi/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +38,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
@@ -75,7 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
