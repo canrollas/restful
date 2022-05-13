@@ -21,6 +21,6 @@ public class CooperativeHeadController {
 
     @GetMapping("/getCode")
     public Code getCode(){
-        return  new Code(iCooperativeHeadService.createCode());
+        return  new iCooperativeHeadService.createCode();
     }
 }
