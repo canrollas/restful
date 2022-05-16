@@ -6,16 +6,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Auction")
+@Table(name="auction")
 public class Auction {
-
+    @Id
+    @Column(name="id")
+    private String id;
     @Column(name="name")
     private String name;
     @Column(name="date")
     private float date;
-    @Id
-    @Column(name="id")
-    private String id;
     @Column(name="quota")
     private int quota;
 

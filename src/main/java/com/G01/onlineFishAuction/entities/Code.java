@@ -6,15 +6,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Code")
+@Table(name="code")
 public class Code {
 	@Id
-	@Column(name="memberCode")
-	String memberCode;
+	@Column(name="membercode")
+	String membercode;
 
 	public Code(String memberCode) {
 		super();
-		this.memberCode = memberCode;
+		this.membercode = memberCode;
 	}
 	
 	public Code() {
@@ -22,7 +22,7 @@ public class Code {
 	}
 
 	public String getMemberCode() {
-		return memberCode;
+		return membercode;
 	}
 	
 	
