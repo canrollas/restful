@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.G01.onlineFishAuction.entities.Auction;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CooperativeHeadManager implements ICooperativeHeadService {
@@ -24,8 +25,10 @@ public class CooperativeHeadManager implements ICooperativeHeadService {
 	}
 
 	@Override
+	@Transactional
 	public String createCode() {
 		return iCodeRepository.generateAndRecord();
+
 	}
 
 }

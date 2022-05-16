@@ -4,12 +4,14 @@ import com.G01.onlineFishAuction.entities.CooperativeHead;
 import com.G01.onlineFishAuction.entities.CooperativeMember;
 import com.G01.onlineFishAuction.entities.Customer;
 import com.G01.onlineFishAuction.entities.Fisherman;
+import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
 
+import java.sql.SQLException;
 import java.util.List;
 public interface IUserService {
 	String login(String username, String password);
-	void customerRegister(Customer newCustomer);
-	void cooperativeMemberRegister(CooperativeMember newMember);
+	void customerRegister(Customer newCustomer) throws SQLException;
+	void cooperativeMemberRegister(CooperativeMember newMember,String code) throws CodeNotFoundException;
 	void deleteCustomer(Customer customer);
 	void deleteCooperativeMember(CooperativeMember cooperativeMember);
 	void deleteFisherman(Fisherman fisherman);

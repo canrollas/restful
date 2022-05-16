@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.G01.onlineFishAuction.entities.Customer;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class HibernateCodeRepository implements ICodeRepository{
@@ -21,6 +22,7 @@ public class HibernateCodeRepository implements ICodeRepository{
 		this.entityManager = entityManager;
 	}
 	@Override
+	@Transactional
 	public String generateAndRecord() {
 		int leftLimit = 97; // letter 'a'
 		int rightLimit = 122; // letter 'z'

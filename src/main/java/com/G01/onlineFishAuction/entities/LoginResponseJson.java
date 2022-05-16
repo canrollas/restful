@@ -7,6 +7,7 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
+// It is only for responsing the login status in http manners.
 public class LoginResponseJson {
     int status;
     String message;

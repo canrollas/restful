@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,8 +58,8 @@ public class UserManager implements IUserService {
 
 	@Override
 	@Transactional
-	public void cooperativeMemberRegister(CooperativeMember newMember) {
-		cooperativeMemberRepository.recordMember(newMember);
+	public void cooperativeMemberRegister(CooperativeMember newMember,String code) throws CodeNotFoundException {
+		cooperativeMemberRepository.recordMember(newMember,code);
 		
 	}
 

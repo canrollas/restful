@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+import com.G01.onlineFishAuction.entities.Code;
+import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,7 +27,7 @@ public class HibernateMemberRepository implements ICooperativeMemberRepository{
 	@Transactional
 	public List<CooperativeMember> getAll() {
 		Session session = entityManager.unwrap(Session.class);
-		List<CooperativeMember> members = session.createQuery("from CooperativeMember",CooperativeMember.class).getResultList();
+		List<CooperativeMember> members = session.createQuery(" from CooperativeMember",CooperativeMember.class).getResultList();
 		return members;
 	}
 
@@ -39,9 +41,15 @@ public class HibernateMemberRepository implements ICooperativeMemberRepository{
 
 	@Override
 	@Transactional
-	public void recordMember(CooperativeMember member) {
+	public void recordMember(CooperativeMember member,String code) throws CodeNotFoundException {
 		Session session = entityManager.unwrap(Session.class);
-		session.saveOrUpdate(member);
+		Code codeFound;
+		if((codeFound = session.find(Code.class,code))!= null){
+			session.delete(codeFound);
+			session.saveOrUpdate(member);
+		}else{
+			throw new CodeNotFoundException("Code is not valid!!");
+		}
 	}
 
 	@Override
