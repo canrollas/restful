@@ -26,54 +26,56 @@ Table of Contents
 6. SSH
 7. Git VCS
 
-What is the Java Spring framework?
+### What is the Java Spring framework?
 Generally, web framework uses various libraries, and it implements many features for backend rendering, performs general behaviors and their responses.
 Spring is a web framework, it's a Python module that lets you develop web applications easily. It's has a small and
 easy-to-extend core: it's a microframework that doesn't include an ORM (Object Relational Manager) or such features.It does have many cool features like url routing, template engine.Moreover and finally, it includes jinja render language which makes dynamic data performing on html files..
-Why Java-Spring framework?
+
+
+### Why Java-Spring framework?
 Java programming language is easy to implement.
 Java spring framework is understandable. 
 Object-oriented manners can be implemented.
 Active communities and quick debugging.
 How to implement Java Spring framework?
  go to spring initializer web page 
-What is MYSQL?
+### What is MYSQL?
 Mysql is query based free structure/Database system
- SQL structure provided from its engine.
+SQL structure provided from its engine.
 Mysql engine stores data in flexible
 How to implement the MYSQL engine?
 Basically you can go to the website.
-What is html ?
+### What is html ?
 HTML, or HyperText Markup Language, allows web users to create and structure sections, paragraphs, and links using elements, tags, and attributes. However, it’s worth noting that HTML is not considered a programming language as it can’t create dynamic functionality.
 It’s also worth noting that HTML is now considered an official web standard. The World Wide Web Consortium (W3C) maintains and develops HTML specifications, along with providing regular updates.
-Why html ?
+### Why html ?
 Sir Timothy John Berners-Lee invented the modern internet which is WWW as every individual knows.
 Berners also invented markup language which is html, and it is standard for W3C organization.
  Great majority of web applications, pages (% 99.9) uses html for standards.
-What is css?
+### What is css?
 Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[ Citation [4]](wikipedia.org)
-Why css?
+### Why css?
 CSS is used to define styles for web pages, including the design, layout and variations in display can be changed
 What is javascript?
 JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World WideWeb, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.[ citation [5]](wikipedia.org)
 
-Why javascript?
+### Why javascript?
 On many models with progress of technology, web applications required browser based dynamic models.
 Using javascript will bring a new dynamic manner to application development.
 SSH Technology
 
 
-What is ssh?
+### What is ssh?
 SSH, also known as Secure Shell , is a network protocol that gives users a secure way to access a computer over an unsecured network.
 
-Why ssh?
+### Why ssh?
 SSH technology generally for remote controlling and testing the server. In this web application , tests and deployment  can be implemented in a remote server.
 With ssh technology no one can access the remote machine who does not have the key.
 Cyber resilience of the system is the most important thing for any kind of bad situation.
 What is the Git Version Control System?
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-Why Git?
+### Why Git?
 Working with a big devops team is exhaustive for collaboration and complicated when assignments are collected in the main project.
 It is the best way to use the version control system for everyone in this project.
 
