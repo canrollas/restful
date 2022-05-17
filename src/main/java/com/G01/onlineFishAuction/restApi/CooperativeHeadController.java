@@ -2,6 +2,7 @@ package com.G01.onlineFishAuction.restApi;
 
 import com.G01.onlineFishAuction.business.ICooperativeHeadService;
 import com.G01.onlineFishAuction.entities.Code;
+import com.G01.onlineFishAuction.exceptions.UsernameAlreadyInUse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,7 +23,7 @@ public class CooperativeHeadController {
     // Post mapping generates 8-digit code and provides to head.
     // It will be in db up to Member signs up with this code.
     @PostMapping("/getCode")
-    public Code getCode(){
+    public Code getCode() throws UsernameAlreadyInUse {
         // create Code -> saves in db.
         String coder=iCooperativeHeadService.createCode();
         return new Code(coder);

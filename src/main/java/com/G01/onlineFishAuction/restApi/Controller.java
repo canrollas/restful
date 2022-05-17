@@ -3,6 +3,7 @@ package com.G01.onlineFishAuction.restApi;
 import com.G01.onlineFishAuction.DTO.CooperativeMemberDTO;
 import com.G01.onlineFishAuction.entities.LoginResponseJson;
 import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
+import com.G01.onlineFishAuction.exceptions.UsernameAlreadyInUse;
 import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.G01.onlineFishAuction.business.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.G01.onlineFishAuction.entities.CooperativeHead;
@@ -105,18 +107,24 @@ public class Controller {
 
     @PostMapping("signup/customer")
     // Customer Sign up Post mapping url
-    public ResponseEntity<String> registerCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<String> registerCustomer(@RequestBody Customer customer) throws UsernameAlreadyInUse {
         try {
             userService.customerRegister(customer);
             // response object returns http 2**
             return new ResponseEntity<>("Successful Registration!", HttpStatus.OK);
         }
         // If not understandable error is thrown which is probably server error.
-        catch (Exception genericEx) {
+        catch (UsernameAlreadyInUse genericEx) {
             genericEx.printStackTrace();
             // If an object other than Customer object is sent, spring automatically throws bad request already.
-            return new ResponseEntity<>(genericEx.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(genericEx.getMessage(), HttpStatus.BAD_REQUEST);
 
+        } catch (SQLException e) {
+            return new ResponseEntity<>("You can not add this data! it is not unique or not valid", HttpStatus.BAD_REQUEST);
+
+        }
+        catch (Exception err) {
+            return new ResponseEntity<>("Not unique data! mail or sth in SYSTEM!", HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -125,7 +133,7 @@ public class Controller {
     // This method is basically adding cooperative member to website.
     @PostMapping("signup/member")
     // Returns Response entity.
-    public ResponseEntity<String> registerCooperativeMember(@RequestBody CooperativeMemberDTO memberDTO) {
+    public ResponseEntity<String> registerCooperativeMember(@RequestBody CooperativeMemberDTO memberDTO) throws UsernameAlreadyInUse{
         try {
             // Try block tries to add customer To website database.
             CooperativeMember newCoopObject = new CooperativeMember(memberDTO.getUsername(), memberDTO.getMail(), memberDTO.getPassword());
@@ -141,21 +149,34 @@ public class Controller {
             return new ResponseEntity<>("Unsuccessful Login... -> Check Code got from Coop. Head", HttpStatus.BAD_REQUEST);
 
         }
+        catch (UsernameAlreadyInUse error) {
+            // If generated code by Cooperative Head is not in db system -> this catch block finds and disables the user.
+            // Bad Request...
+            error.printStackTrace();
+            return new ResponseEntity<>("Unsuccessful Login... -> Check username", HttpStatus.BAD_REQUEST);
+
+        }
+        catch (Exception err) {
+            return new ResponseEntity<>("Not unique data! mail or sth in SYSTEM!", HttpStatus.BAD_REQUEST);
+        }
         // If an object other than CooperativeMemberDTO object is sent, spring automatically throws bad request already.
 
     }
 
     // Registering the fisherman Url post mapping.
     @PostMapping("/register-fisherman")
-    public ResponseEntity<String> registerFisherman(@RequestBody Fisherman fisherman) {
+    public ResponseEntity<String> registerFisherman(@RequestBody Fisherman fisherman) throws UsernameAlreadyInUse{
         try {
             // Succes HTTP 2**
             cooperativeMemberService.registerFisherman(fisherman);
             return new ResponseEntity<>("Succesful atempt to add fisherman", HttpStatus.OK);
-        } catch (Exception generic) {
+        } catch (UsernameAlreadyInUse generic) {
             // There is a reason it was registered backend.
             // If an object other than Fisherman object is sent, spring automatically throws bad request.
-            return new ResponseEntity<>(generic.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(generic.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+        catch (Exception err) {
+            return new ResponseEntity<>("Not unique data! mail or sth in SYSTEM!", HttpStatus.BAD_REQUEST);
         }
     }
 
