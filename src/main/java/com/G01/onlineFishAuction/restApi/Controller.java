@@ -1,6 +1,7 @@
 package com.G01.onlineFishAuction.restApi;
 
 import com.G01.onlineFishAuction.DTO.CooperativeMemberDTO;
+import com.G01.onlineFishAuction.DTO.SignupResponseDTO;
 import com.G01.onlineFishAuction.entities.LoginResponseJson;
 import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
 import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
