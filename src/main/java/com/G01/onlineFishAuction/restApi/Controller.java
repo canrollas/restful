@@ -91,7 +91,8 @@ public class Controller {
             if ((userType = userService.login(username, password)) != null) {
                 // Http status 2**
                 return new ResponseEntity<>(new LoginResponseJson(200, userType, "/api/login", userType), HttpStatus.OK);
-            } else {
+            }
+            else {
                 // Http status 4**
                 return new ResponseEntity<>(new LoginResponseJson(400, "Invalid Requests", "/api/login", userType), HttpStatus.BAD_REQUEST);
             }
