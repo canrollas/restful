@@ -4,7 +4,9 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import com.G01.onlineFishAuction.entities.*;
 import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
+import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +15,6 @@ import com.G01.onlineFishAuction.dataAccess.ICooperativeMemberRepository;
 import com.G01.onlineFishAuction.dataAccess.ICustomerRepository;
 import com.G01.onlineFishAuction.dataAccess.IFishermanRepository;
 import com.G01.onlineFishAuction.dataAccess.IUserRepository;
-import com.G01.onlineFishAuction.entities.CooperativeHead;
-import com.G01.onlineFishAuction.entities.CooperativeMember;
-import com.G01.onlineFishAuction.entities.Customer;
-import com.G01.onlineFishAuction.entities.Fisherman;
 
 @Service
 public class UserManager implements IUserService {
@@ -44,7 +42,7 @@ public class UserManager implements IUserService {
 
 	@Override
 	@Transactional
-	public String login(String username, String password) {
+	public String login(String username, String password) throws UsernameNotFoundException {
 		return userRepository.checkLoginData(username, password);
 		
 	}

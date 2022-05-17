@@ -1,8 +1,10 @@
 package com.G01.onlineFishAuction.restApi;
 
 import com.G01.onlineFishAuction.DTO.CooperativeMemberDTO;
+import com.G01.onlineFishAuction.DTO.SignupResponseDTO;
 import com.G01.onlineFishAuction.entities.LoginResponseJson;
 import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
+import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -82,32 +84,39 @@ public class Controller {
 
     @GetMapping("/loginget/{username}/{password}")
     // Basically generic type login function for backend
-    public ResponseEntity<LoginResponseJson> login(@PathVariable String username, @PathVariable String password) {
+    public ResponseEntity<LoginResponseJson> login(@PathVariable String username, @PathVariable String password) throws UsernameNotFoundException {
         String userType = "";
         // returning user type for front-end programmer.
-        if ((userType = userService.login(username, password)) != null) {
-            // Http status 2**
-            return new ResponseEntity<>(new LoginResponseJson(200, userType, "/api/login", userType), HttpStatus.OK);
-        } else {
-            // Http status 4**
-            return new ResponseEntity<>(new LoginResponseJson(400, userType, "/api/login", userType), HttpStatus.BAD_REQUEST);
+        try {
+            if ((userType = userService.login(username, password)) != null) {
+                // Http status 2**
+                return new ResponseEntity<>(new LoginResponseJson(200, userType, "/api/login", userType), HttpStatus.OK);
+            } else {
+                // Http status 4**
+                return new ResponseEntity<>(new LoginResponseJson(400, "Invalid Requests", "/api/login", userType), HttpStatus.BAD_REQUEST);
+            }
         }
+        catch (UsernameNotFoundException exception){
+            return new ResponseEntity<>(new LoginResponseJson(400, "Username does not exists!", "/api/login", userType), HttpStatus.BAD_REQUEST);
+        }
+
 
     }
 
     @PostMapping("signup/customer")
     // Customer Sign up Post mapping url
-    public ResponseEntity<String> registerCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<SignupResponseDTO> registerCustomer(@RequestBody Customer customer) {
+        SignupResponseDTO signupResponseDTO = new SignupResponseDTO();
         try {
             userService.customerRegister(customer);
             // response object returns http 2**
-            return new ResponseEntity<>("Successful Registration!", HttpStatus.OK);
+            return new ResponseEntity<SignupResponseDTO>(signupResponseDTO, HttpStatus.OK);
         }
         // If not understandable error is thrown which is probably server error.
         catch (Exception genericEx) {
             genericEx.printStackTrace();
             // If an object other than Customer object is sent, spring automatically throws bad request already.
-            return new ResponseEntity<>(genericEx.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<SignupResponseDTO>(signupResponseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
     }
