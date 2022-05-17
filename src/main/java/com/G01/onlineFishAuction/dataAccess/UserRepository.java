@@ -4,6 +4,7 @@ package com.G01.onlineFishAuction.dataAccess;
 
 import javax.persistence.EntityManager;
 
+import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -22,20 +23,31 @@ public class UserRepository implements IUserRepository{
 
 	@Override
 	@Transactional
-	public String checkLoginData(String username, String password) {
+	public String checkLoginData(String username, String password) throws UsernameNotFoundException{
 		Session session  = entityManager.unwrap(Session.class);
 		IUser user;
 		if((user= session.get(CooperativeHead.class, username)) != null) {
-			return user.getPassword().equals(password) ? "CooperativeHead" : null;
+			if(user.getPassword().equals(password)){
+				return "CooperativeHead";
+			}
+			throw new UsernameNotFoundException();
 		}
 		else if((user = session.get(Customer.class,username)) != null) {
-			return user.getPassword().equals(password) ? "Customer" : null;
-		
+			if(user.getPassword().equals(password)){
+				return "Customer";
+			}
+			throw new UsernameNotFoundException();
+
 		}else if((user = session.get(CooperativeMember.class,username)) != null) {
-			
-			return user.getPassword().equals(password) ? "cooperativeMember" : null;
+			if(user.getPassword().equals(password)){
+				return "cooperativeMember";
+			}
+			throw new  UsernameNotFoundException();
 		}else if((user = session.get(Fisherman.class,username)) != null) {
-			return user.getPassword().equals(password) ? "fisherman" : null;
+			if(user.getPassword().equals(password)){
+				return "fisherman";
+			}
+			throw new  UsernameNotFoundException();
 		}
 		else {
 			return null;
