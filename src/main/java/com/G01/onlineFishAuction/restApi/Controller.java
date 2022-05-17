@@ -87,10 +87,10 @@ public class Controller {
         // returning user type for front-end programmer.
         if ((userType = userService.login(username, password)) != null) {
             // Http status 2**
-            return new ResponseEntity<>(new LoginResponseJson(200, "Successfully logged in!", "/api/login", userType), HttpStatus.OK);
+            return new ResponseEntity<>(new LoginResponseJson(200, userType, "/api/login", userType), HttpStatus.OK);
         } else {
             // Http status 4**
-            return new ResponseEntity<>(new LoginResponseJson(400, "Not logged in! check data", "/api/login", userType), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new LoginResponseJson(400, userType, "/api/login", userType), HttpStatus.BAD_REQUEST);
         }
 
     }
