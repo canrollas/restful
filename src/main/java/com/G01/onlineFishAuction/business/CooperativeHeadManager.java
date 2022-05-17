@@ -3,6 +3,7 @@ package com.G01.onlineFishAuction.business;
 import java.util.Date;
 
 import com.G01.onlineFishAuction.dataAccess.ICodeRepository;
+import com.G01.onlineFishAuction.exceptions.UsernameAlreadyInUse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,8 @@ public class CooperativeHeadManager implements ICooperativeHeadService {
 
 	@Override
 	@Transactional
-	public String createCode() {
+	public String createCode() throws UsernameAlreadyInUse {
+
 		return iCodeRepository.generateAndRecord();
 
 	}

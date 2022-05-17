@@ -1,11 +1,14 @@
 package com.G01.onlineFishAuction.business;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.transaction.Transactional;
 
 import com.G01.onlineFishAuction.entities.*;
 import com.G01.onlineFishAuction.exceptions.CodeNotFoundException;
+import com.G01.onlineFishAuction.exceptions.UsernameAlreadyInUse;
 import com.G01.onlineFishAuction.exceptions.UsernameNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -49,15 +52,35 @@ public class UserManager implements IUserService {
 	
 	@Override
 	@Transactional
-	public void customerRegister(Customer newCustomer) {
-		customerRepository.recordCustomer(newCustomer);
-		
+	public void customerRegister(Customer newCustomer) throws UsernameAlreadyInUse {
+		Iterator<Customer> getAllcustomers = getAllCustomers().iterator();
+		ArrayList<String> usernames = new ArrayList<>();
+		while (getAllcustomers.hasNext()){
+			usernames.add(getAllcustomers.next().getUsername());
+		}
+
+		if (usernames.contains(newCustomer.getUsername())){
+			throw new UsernameAlreadyInUse("Username already in use!!");
+		}else{
+			customerRepository.recordCustomer(newCustomer);
+		}
+
 	}
 
 	@Override
 	@Transactional
-	public void cooperativeMemberRegister(CooperativeMember newMember,String code) throws CodeNotFoundException {
-		cooperativeMemberRepository.recordMember(newMember,code);
+	public void cooperativeMemberRegister(CooperativeMember newMember,String code) throws CodeNotFoundException, UsernameAlreadyInUse {
+		Iterator<CooperativeMember> memberIterator = getAllMembers().iterator();
+		ArrayList<String> usernames = new ArrayList<>();
+		while (memberIterator.hasNext()){
+			usernames.add(memberIterator.next().getUsername());
+		}
+		if (usernames.contains(newMember.getUsername())){
+			throw new UsernameAlreadyInUse("Username already in use!!");
+		}
+		else {
+			cooperativeMemberRepository.recordMember(newMember,code);
+		}
 		
 	}
 
