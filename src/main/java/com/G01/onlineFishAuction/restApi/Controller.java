@@ -105,21 +105,21 @@ public class Controller {
 
     @PostMapping("signup/customer")
     // Customer Sign up Post mapping url
-    public ResponseEntity<SignupResponseDTO> registerCustomer(@RequestBody Customer customer) {
-        SignupResponseDTO signupResponseDTO = new SignupResponseDTO();
+    public ResponseEntity<String> registerCustomer(@RequestBody Customer customer) {
         try {
             userService.customerRegister(customer);
             // response object returns http 2**
-            return new ResponseEntity<SignupResponseDTO>(signupResponseDTO, HttpStatus.OK);
+            return new ResponseEntity<>("Successful Registration!", HttpStatus.OK);
         }
         // If not understandable error is thrown which is probably server error.
         catch (Exception genericEx) {
             genericEx.printStackTrace();
             // If an object other than Customer object is sent, spring automatically throws bad request already.
-            return new ResponseEntity<SignupResponseDTO>(signupResponseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(genericEx.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 
         }
     }
+
 
 
     // This method is basically adding cooperative member to website.
