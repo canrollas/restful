@@ -17,17 +17,15 @@ public class Fisherman implements IUser{
 	String mail;
 	@Column(name="iban")
 	String iban;
-	@Column(name="owner")
-	String owner;
+
 	
 	
-	public Fisherman(String username, String password, String mail, String iban, String owner) {
+	public Fisherman(String username, String password, String mail, String iban) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.mail = mail;
 		this.iban = iban;
-		this.owner = owner;
 	}
 	public Fisherman() {
 		
@@ -44,9 +42,6 @@ public class Fisherman implements IUser{
 	}
 
 
-	public String getOwner() {
-		return owner;
-	}
 
 
 	@Override
